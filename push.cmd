@@ -1,0 +1,1 @@
+cd "X:/Project/Public/alicdn-analytics.github.io" && git add -A && git commit -m "Update assets" && git push 2>&1
